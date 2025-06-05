@@ -1,0 +1,353 @@
+<html>
+<head>
+	<title> CSS 3</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<style>
+	 body{
+            margin: 0;
+            padding: 0;
+        }
+		ul{
+		padding:0;
+		margin:0;
+		list-style:none;
+		display:flex;
+		justify-content: center;
+		align-items: baseline;
+		}
+
+		li{
+		padding:20px;
+		}
+		#logo{
+		font-weight:bold;
+		font-size:25px;
+		margin-right:auto;
+		}
+		
+		li button{
+		margin-left:400px;
+		padding:15px;
+		background-color:red;
+		}
+		a{
+		text-decoration:none;
+		color:black;
+		}
+		a:hover{
+		color:red;
+		}
+		li button:hover{
+		background-color:pink;
+		}
+		.menu{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin: 0px 60px;
+		}
+		img{
+		height: 70%;
+		width: 100%;
+		}
+		.menu div{
+			/* border:2px solid rgb(255, 0, 0); */
+			margin:10px;
+			
+		}
+		#title{
+			text-align: center;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		.menu h4{
+			display: inline;
+			
+		}
+		.menu h6{
+			display:inline;
+		}
+		.menu button{
+			display: flex;
+		}
+
+
+
+         .hero img{
+            width: 100%;
+            height: 65vh;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+			
+        }
+        .hero h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-size: 60px;
+        }
+        .hero h4{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .updateimg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+             
+        }
+        .updateimg img{
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            
+        }
+
+        .updateimg img:hover{
+            transform: scale(1.5);
+            
+            transition: transform 0.3s ease;
+        }
+        .updateimg button{
+            position: absolute;
+            top: 72%;
+            left: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .update1, .update2,.update3{
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            
+        }
+        .update1 h2, .update2 h2 ,.update3 h2{
+            top: 80%;
+            left: 10px;
+            color: white;
+            position: absolute;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-size: 40px;
+           
+        }
+        .updates{
+            margin-bottom: 90px;
+            margin-top: 90px;
+        }
+        .updates h1{
+            text-align: left;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #333;
+            margin-left: 8%;
+        }
+
+
+        /*events section*/
+       .menumain{
+            background-color: #f8f9fa;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin: 0px 60px;
+        
+		}
+		img{
+		height: 70%;
+		width: 100%;
+		}
+		.menu div{
+			/* border:2px solid rgb(255, 0, 0); */
+			margin:10px;
+            
+			
+		}
+		#title{
+			text-align: center;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		.menu h4,.lunchmenu h4{
+			display: inline;
+			
+		}
+		.menu h6,.lunchmenu h6{
+			display:inline;
+		}
+		.menu button{
+			display: flex;
+		}
+		/* .info{
+			margin:0px;
+			display: flex; */
+		.info h4{
+			margin-right: 159px;
+		}
+		.info button{
+			display: inline-block;
+			margin-left: auto;
+			font-size: 16px;
+			border-radius: 14px;
+			background-color: rgb(84, 183, 241);
+			padding: 15px;
+			border:none;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+		}
+		.checked {
+  			color: orange;
+		}
+		.rate{
+			margin-left:10px;
+		}
+		.rev{
+			font-weight: lighter;
+		}
+		 #location button {
+        padding: 15px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 15px;
+      }
+
+      #footer-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
+      }
+      #footerimg {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        opacity: 50%;
+      }
+
+
+
+</style>
+</head>
+<body>
+	
+	<nav>
+		<ul class="navmenu">
+			
+			<li id="logo"><a href="../index.html">Crispy Kitchen</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../story/story.html">story</a></li>
+			<li><a href="../menu/menu.html">Menu</a></li>
+			<li><a href="../update/updates.html">Our updates</a></li>
+			<li><a href="../contact/contact.html">Contact</a></li>
+			<li id="btn"><a href="../reservation/reservation.html"><Button>Reservation</Button></a></li>
+			
+		</ul>
+	</nav>
+
+     <div class="hero">
+        <img src="../components/updatesimg.jpg" alt="">
+        <h1>News & Events</h1>
+        <h4>this is how our kitchen evolved in new digital era</h4>
+    </div>
+
+    <div class="updates">
+        <h1>Latest Updates</h1>
+        <div class="updateimg">
+            <div class="update1">
+                <img src="../components/dish15.jpg" alt="">
+                <button>Fetured</button>
+                <h2>How to make a healthy diet</h2>
+            </div>
+            <div class="update2">
+                <img src="../components/dish16.jpg" alt="">
+                <button>Fetured</button>
+                <h2>happy living and happy eating tips</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="menumain">
+<h2 id="title">Breakfast Menu<h2>
+		<div class="menu">
+			<div>
+				<div class="imgdis">
+				<img id="bgscroll" src="../components/update1.jpg">
+				</div>
+				<div class="info">
+					<button>Promotions</button>
+					<h4> 12 April 2022  </h4>
+				</div>
+				<h4 class="rate">Is Coconut good for your health?</h4>
+		
+	</div>
+	<div>
+		<div class="imgdis">
+		<img src="../components/update2.jpg"></div>
+		<div class="info">
+			<button>Career</button>
+			<h4> 18 April 2022</h4>
+			
+		</div>
+		<h4 class="rate">How to run a sushi business?</h4>
+		
+	</div>
+	<div>
+		<div class="imgdis">
+		<img src="../components/update3.jpg"></div>
+		<div class="info">
+			<button>Meeting</button>
+			<h4> 30 April 2022</h4>
+		</div>
+		<h4 class="rate">Learning a fine dining experience</h4>
+	</div>
+</div>
+</div>
+<div id="footer">
+	<img id="footerimg" src="../components/footerimg.jpg" alt="">
+	<div id="footer-container">
+		<div id="location">
+			<h2>Crispy Kitchen</h2>
+				<h3>Location</h3>
+				<h4>121 Einstein Loop N, Bronx, NY 10475, United States</h4>
+				<button>Directions</button>
+			</div>
+			<div>
+				<h3>Opening Hours</h3>
+				<h4>Monday - Friday</h4>
+				<h4>10:00 AM - 08:00 PM</h4>
+				<h4>Tel: 123456789</h4>
+			</div>
+			<div>
+				<h3>Social</h3>
+				<i class="fa-brands fa-facebook"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-x-twitter"></i>
+				<i class="fa-brands fa-youtube"></i>
+				<h4>Copyright &copy; Janmejay Pandya</h4>
+			</div>
+		</div>
+	</div>
+</body>	
+</html>
