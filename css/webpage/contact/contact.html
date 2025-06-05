@@ -1,0 +1,306 @@
+<html>
+  <head>
+    <title>CSS 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+      }
+
+      li {
+        padding: 20px;
+      }
+      #logo {
+        font-weight: bold;
+        font-size: 25px;
+        margin-right: auto;
+      }
+
+      li button {
+        margin-left: 400px;
+        padding: 15px;
+        background-color: red;
+      }
+      a:hover {
+        color: red;
+      }
+      li button:hover {
+        background-color: pink;
+      }
+
+      .menumain {
+        background-color: #f8f9fa;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      #location button {
+        padding: 15px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 15px;
+      }
+
+      #footer-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
+      }
+      #footerimg {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        opacity: 50%;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 65vh;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .hero h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 60px;
+      }
+      .hero h4 {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      /*css for contact form*/
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        margin: 110px;
+      }
+
+      .form-section {
+        flex: 2;
+      }
+
+      .form-section h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 20px;
+      }
+
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .input-box label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #4a4a4a;
+      }
+
+      input,
+      textarea {
+        padding: 14px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: inherit;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 120px;
+      }
+
+      .form-section button {
+        width: 160px;
+        padding: 14px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-left: 600px;
+      }
+
+      button:hover {
+        background-color: #333;
+      }
+
+      .hours-section {
+        flex: 1;
+      }
+
+      .hours-section h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .hours-section p {
+        font-size: 16px;
+        margin-bottom: 24px;
+        color: #666;
+      }
+
+      .hours-section span {
+        float: right;
+        color: #666;
+      }
+
+      #location1 {
+        text-align: center;
+        margin-top: 20px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 100px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul class="navmenu">
+			<li id="logo"><a href="../index.html">Crispy Kitchen</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../story/story.html">story</a></li>
+			<li><a href="../menu/menu.html">Menu</a></li>
+			<li><a href="../update/updates.html">Our updates</a></li>
+			<li><a href="../contact/contact.html">Contact</a></li>
+			<li id="btn"><a href="../reservation/reservation.html"><Button>Reservation</Button></a></li>
+			
+		</ul>
+    </nav>
+
+    <div class="hero">
+      <img src="../components/contact1.jpg" alt="" />
+      <h1>Say Hi</h1>
+      <h4>We are happy to get in touch with you</h4>
+    </div>
+
+    <div class="container">
+      <div class="form-section">
+        <h1>Leave a message</h1>
+        <form>
+          <div class="input-group">
+            <div class="input-box">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your Name" />
+            </div>
+            <div class="input-box">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="123-456-7890" />
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" />
+          </div>
+          <div class="input-box">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+
+      <div class="hours-section">
+        <div>
+          <h2>Weekdays</h2>
+          <p>Monday to Friday <span>10:00 AM - 08:00 PM</span></p>
+        </div>
+        <div>
+          <h2>Weekends</h2>
+          <p>Saturday and Sunday <span>11:00 AM - 11:00 PM</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="location1">
+      <h2>121 Einstein Loop N, Bronx, NY 10475, United States</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.848353427382!2d-73.82513668459396!3d40.86482417931664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28cbc17f4a0c3%3A0x9ae0f1e804a817d!2s121%20Einstein%20Loop%20N%2C%20Bronx%2C%20NY%2010475%2C%20USA!5e0!3m2!1sen!2sus!4v1717589889123!5m2!1sen!2sus"
+        width="80%"
+        height="300"
+        style="border: 0; align-items: center"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+
+    <div id="footer">
+      <img id="footerimg" src="../components/footerimg.jpg" alt="" />
+      <div id="footer-container">
+        <div id="location">
+          <h2>Crispy Kitchen</h2>
+          <h3>Location</h3>
+          <h4>121 Einstein Loop N, Bronx, NY 10475, United States</h4>
+          <button>Directions</button>
+        </div>
+        <div>
+          <h3>Opening Hours</h3>
+          <h4>Monday - Friday</h4>
+          <h4>10:00 AM - 08:00 PM</h4>
+          <h4>Tel: 123456789</h4>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+				  <i class="fa-brands fa-x-twitter"></i>
+				  <i class="fa-brands fa-youtube"></i>
+				  <h4>Copyright &copy; Janmejay Pandya</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
