@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Compare Two Numbers</h1>
+    <label for="text1">Number 1:</label>
+    <input type="number" name="" id="text1">
+    <label for="text2">Number 2:</label>
+    <input type="number" name="" id="text2">
+    <br><br>
+    <button onclick="return compare()">Compare</button><br>
+
+    <div id="result"></div>
+    <script>
+        function compare() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+            var result = text1 === text2 ? "match same." : "not match.";
+            document.getElementById("result").innerText = result;
+            return false;
+
+
+        }
+    </script>
+</body>
+</html>
