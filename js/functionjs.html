@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQS</title>
+    <style>
+        body {
+            background-color: #8bd2cd;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #af4c4c; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d9534f; /* Darker shade on hover */
+        }
+        input[type="radio"] {
+            margin: 10px;
+            
+        }
+        .mcq1 {
+            
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="h1">What is the full form of "RAM"</h1>
+    <button id="btn" onmouseover="clk()" onmouseout="clk2()">Random Acess Memory</button>
+    <button id="btn" onmouseover="clk1()" onmouseout="clk2()">Random Activa Memory</button>
+    <p id="Answer"></p>
+
+
+    <h3>what is full form of CSS</h3>
+    <div class="mcq1">
+    <input type="radio"value="Cascading Style Sheet" name="css" id="css1">
+    <label for="css1">A. Cascading Style Sheet</label><br>
+    <input type="radio" value="Cascading Style Sheets" name="css" id="css2">
+    <label for="css2">B. Cascading Style Sheets</label><br>
+    <input type="radio" value="Cascading Style Sheetss" name="css" id="css3">
+    <label for="css3">C. Cascading Style Sheetss</label><br>
+    <input type="radio" value="Cascading Style Sheetsss" name="css" id="css4">
+    <label for="css4">D. Cascading Style Sheetsss</label><br>
+    <button id="btn" onclick="clk3()">Submit</button>
+    </div>
+    <script>
+        function clk(){
+        document.getElementById("Answer").innerHTML = "Correct Answer";
+        document.getElementById("Answer").style.color = "green";
+    }
+    function clk1(){
+        document.getElementById("Answer").innerHTML = "Wrong Answer";
+        document.getElementById("Answer").style.color = "red";
+
+    }
+    function clk2(){
+        document.getElementById("Answer").innerHTML = "";
+    }
+    function clk3() {
+        var radios = document.getElementsByName('css');
+        var answer = "";
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                answer = radios[i].value;
+                break;
+            }
+        }
+        if (answer === "Cascading Style Sheets") {
+            alert("Correct Answer");
+        } else {
+            alert("Wrong Answer");
+        }
+    }
+    </script>
+</body>
+</html>
