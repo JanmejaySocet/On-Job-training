@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow</title>
+    <style>
+        body {
+            background-color: #8bd2cd;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            background-color: #af4c4c; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d9534f; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Janmejay Pandya</h1>
+    <button onclick="clk()" ondblclick="clk2()">Change Color</button>
+    <script>
+        function clk(){
+            var color = document.getElementById("h1");
+            color.style.color = "red";
+            
+        }
+        function clk2(){
+            var color = document.getElementById("h1");
+            color.style.color = "black";
+        }
+    </script>
+</body>
+</html>
