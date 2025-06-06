@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #8bd2cd;
+            text-align: center;
+            padding: 50px;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: chocolate;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input  id="ip" type="text" name="" id="">
+    <button onclick="clk()">submit</button>
+    <div id="text"></div>
+    <script>
+        function clk() {
+            var text = document.getElementById("text");
+            var ip = document.getElementById("ip").value;
+            text.innerHTML = ip;
+            text.style.width = "100%";
+            text.style.overflow = "hidden";
+            text.style.display = "flex";
+            text.style.color = "white";
+            
+        }
+    </script>
+</body>
+</html>
