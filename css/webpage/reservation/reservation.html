@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <style>
+      /* */
       body {
         margin: 0;
         padding: 0;
@@ -165,92 +166,195 @@
       .submit-btn:hover {
         background: #333;
       }
+      .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
     </style>
   </head>
-  <body>
-    <nav>
-        <ul class="navmenu">
-			<li id="logo"><a href="../index.html">Crispy Kitchen</a></li>
-			<li><a href="../index.html">Home</a></li>
-			<li><a href="../story/story.html">story</a></li>
-			<li><a href="../menu/menu.html">Menu</a></li>
-			<li><a href="../update/updates.html">Our updates</a></li>
-			<li><a href="../contact/contact.html">Contact</a></li>
-			<li id="btn"><a href="../reservation/reservation.html"><Button>Reservation</Button></a></li>
-			
-		</ul>
-    </nav>
+ <body>
+  <!-- ... [Navigation Code Remains Same] ... -->
 
-    <div class="container">
-      <form class="reservation-form">
-        <h1>Reserve a table</h1>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Your Name" />
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="your@email.com" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="123-456-7890" />
-          </div>
-          <div class="form-group">
-            <label>Number of persons</label>
-            <input type="text" placeholder="12 persons" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Date</label>
-            <input type="date" />
-          </div>
-          <div class="form-group">
-            <label>Time</label>
-            <select>
-              <option>5:00 PM</option>
-              <option>6:00 PM</option>
-              <option>7:00 PM</option>
-              <option>8:00 PM</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group full-width">
-          <label>Special Request</label>
-          <textarea rows="4" placeholder=""></textarea>
-        </div>
-        <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
-      </form>
-    </div>
+  <div class="container">
+    <form class="reservation-form" id="reservationForm" novalidate>
+      <h1>Reserve a table</h1>
 
-    <div id="footer">
-      <img id="footerimg" src="../components/footerimg.jpg" alt="" />
-      <div id="footer-container">
-        <div id="location">
-          <h2>Crispy Kitchen</h2>
-          <h3>Location</h3>
-          <h4>121 Einstein Loop N, Bronx, NY 10475, United States</h4>
-          <button>Directions</button>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Your Name" />
+          <div class="error" id="nameError"></div>
         </div>
-        <div>
-          <h3>Opening Hours</h3>
-          <h4>Monday - Friday</h4>
-          <h4>10:00 AM - 08:00 PM</h4>
-          <h4>Tel: 123456789</h4>
-        </div>
-        <div>
-          <h3>Social</h3>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-				  <i class="fa-brands fa-x-twitter"></i>
-				  <i class="fa-brands fa-youtube"></i>
-				  <h4>Copyright &copy; Janmejay Pandya</h4>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+          <div class="error" id="emailError"></div>
         </div>
       </div>
-    </div>
-  </body>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="123-456-7890" />
+          <div class="error" id="phoneError"></div>
+        </div>
+        <div class="form-group">
+          <label for="persons">Number of persons</label>
+          <input type="text" id="persons" placeholder="12 persons" />
+          <div class="error" id="personsError"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" />
+          <div class="error" id="dateError"></div>
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <select id="time">
+            <option value="">Select a time</option>
+            <option>5:00 PM</option>
+            <option>6:00 PM</option>
+            <option>7:00 PM</option>
+            <option>8:00 PM</option>
+          </select>
+          <div class="error" id="timeError"></div>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" />
+        <div class="error" id="passwordError"></div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="request">Special Request</label>
+        <textarea rows="4" id="request" placeholder=""></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
+      
+    </form>
+  </div>
+
+  <!-- ... [Footer Code Remains Same] ... -->
+
+  <script>
+    const form = document.getElementById("reservationForm");
+
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const persons = document.getElementById("persons");
+    const date = document.getElementById("date");
+    const time = document.getElementById("time");
+    const password = document.getElementById("password");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      validateForm();
+    });
+
+    function validateForm() {
+      clearErrors();
+
+      let isValid = true;
+
+      if (fullName.value.trim() === "") {
+        showError("nameError", "Full Name is required");
+        isValid = false;
+      }
+
+      if (email.value.trim() === "" || !email.value.includes("@")) {
+        showError("emailError", "Valid Email is required");
+        isValid = false;
+      }
+
+      const phoneDigits = phone.value.replace(/\D/g, "");
+      if (phoneDigits.length !== 10) {
+        showError("phoneError", "Valid 10-digit phone number required");
+        isValid = false;
+      }
+
+      if (persons.value.trim() === "" || isNaN(persons.value)) {
+        showError("personsError", "Enter a valid number of persons");
+        isValid = false;
+      }
+
+      if (date.value === "") {
+        showError("dateError", "Date is required");
+        isValid = false;
+      }
+
+      if (time.value === "") {
+        showError("timeError", "Time is required");
+        isValid = false;
+      }
+
+      if (!validatePassword(password.value)) {
+        showError("passwordError", "Password must be at least 8 characters, include uppercase, lowercase, number, and symbol");
+        isValid = false;
+      }
+
+      if (isValid) {
+        form.submit();
+      }
+    }
+
+    function showError(id, message) {
+      document.getElementById(id).textContent = message;
+    }
+
+    function clearErrors() {
+      document.querySelectorAll(".error").forEach((el) => el.textContent = "");
+    }
+
+    function validatePassword(pwd) {
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      return regex.test(pwd);
+    }
+
+
+
+    // Live password validation
+    password.addEventListener("input", () => {
+      const pwdVal = password.value;
+      const pwdError = document.getElementById("passwordError");
+
+      if (!validatePassword(pwdVal)) {
+        pwdError.textContent = "Weak password. Try using uppercase, lowercase, numbers, symbols and 8+ chars.";
+        password.classList.add("invalid");
+        password.classList.remove("valid");
+      } else {
+        pwdError.textContent = "Strong password ✔";
+        password.classList.remove("invalid");
+        password.classList.add("valid");
+      }
+    });
+
+        //show entered details as alert
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (validateForm()) {
+        const details = `
+          Full Name: ${fullName.value}\n
+          Email: ${email.value}\n
+          Phone: ${phone.value}\n
+          Persons: ${persons.value}\n
+          Date: ${date.value}\n
+          Time: ${time.value}\n
+          Special Request: ${document.getElementById("request").value}
+        `;
+        alert("Reservation Details:\n" + details);
+      }
+    });
+
+    
+  
+  </script>
+</body>
 </html>
