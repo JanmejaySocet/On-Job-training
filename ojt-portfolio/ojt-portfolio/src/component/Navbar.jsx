@@ -10,6 +10,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Brand */}
         <Link to="/Contact" className="text-purple-400 hover:text-purple-300 transition"><h1 className="text-2xl font-bold">Janmejay Pandya</h1></Link>
+        
 
         {/* Hamburger Icon - Mobile Only */}
         <button
