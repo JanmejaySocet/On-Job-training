@@ -27,7 +27,6 @@ const App= () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="*" element={<Nopage />} />
     </Routes>
-    
     </BrowserRouter>
     </>
   )
